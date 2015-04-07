@@ -9,6 +9,8 @@ int main()
     double sum=0;
     double average;
     double highest=0;
+    double highestINDEX=0;
+    double lowestINDEX=0;
     double lowest=1000000;
     double sales;
     int userID[10];
@@ -32,16 +34,18 @@ for (i=0;i<10;i++){
     if(highest <= userSALES[i])
     {
         highest = userSALES[i];
+        highestINDEX=i;
     }
 }
-cout<<"The highest sales is: "<<highest<<endl;
+cout<<"The highest sales is: "<<highest<<" by " << highestINDEX<<endl;
 for (i=0;i<10;i++){
     if(lowest >= userSALES[i])
     {
         lowest = userSALES[i];
+        lowestINDEX=i;
     }
 }
-cout<<"The lowest sales is: "<<lowest<<endl;
+cout<<"The lowest sales is: "<<lowest<<" by " << lowestINDEX<<endl;
 
 for (i=0; i<10; i++){
     sum= sum + userSALES[i];
