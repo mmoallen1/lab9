@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i=0;
+    double id;
+    double sum=0;
+    double average;
+    double highest=0;
+    double lowest=1000000;
+    double sales;
+    int userID[10];
+    int userSALES[10];
+    for (i=0; i<10; i++){
+        cout<<"Enter ID "<<i+1<<endl;
+        cin>>id;
+        userID[i]=id;
+        cout<<"Enter Sales "<<i+1<<endl;
+        cin>>sales;
+        userSALES[i]=sales;
+    }
+    cout<<"\nID            SALES\n";
+    for (i=0; i<10; i++){
+
+        cout<<userID[i] << "\t : \t";
+        cout<<userSALES[i]<<endl;
+    }
+
+for (i=0;i<10;i++){
+    if(highest <= userSALES[i])
+    {
+        highest = userSALES[i];
+    }
+}
+cout<<"The highest sales is: "<<highest<<endl;
+for (i=0;i<10;i++){
+    if(lowest >= userSALES[i])
+    {
+        lowest = userSALES[i];
+    }
+}
+cout<<"The lowest sales is: "<<lowest<<endl;
+
+for (i=0; i<10; i++){
+    sum= sum + userSALES[i];
+} cout<<"\nthe sum is: "<<sum<<endl;
+average = sum/10;
+cout<<"The average is: "<<average<<endl;
+
+
+    return 0;
+}
