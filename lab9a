@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i=0;
+    int num=0;
+    int lowest=100;
+    int highest=0;
+    double average;
+    double sum=0;
+    int grades[10];
+    for (i=0; i<10; i++){
+            do{
+        cout<<"Enter grade " << i+1 <<endl;
+        cin>>num;
+  }     while (num<0 || num>100);
+  grades[i]=num;
+    }
+
+      for (i=0; i<10; i++){
+
+            cout<<" " << grades[i];
+    }
+for (i=0; i<10; i++){
+    sum= sum + grades[i];
+} cout<<"\nthe sum is: "<<sum<<endl;
+average = sum/10;
+cout<<"The average is: "<<average<<endl;
+for (i=0;i<10;i++){
+    if(lowest >= grades[i])
+    {
+        lowest = grades[i];
+    }
+}
+cout<<"The lowest grade is: "<<lowest<<endl;
+for (i=0;i<10;i++){
+    if(highest <= grades[i])
+    {
+        highest = grades[i];
+    }
+}
+cout<<"The highest grade is: "<<highest<<endl;
+    return 0;
+}
